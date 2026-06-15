@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linen Exchange - Commercial Linen Hire & Laundry Services Brisbane</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Garamond', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f5f3f0;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-weight: 600;
+            color: #1e3a4c;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            color: #c4a878;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 100%;
+            width: auto;
+        }
+
+        .cta-call {
+            background-color: #1e3a4c;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        }
+
+        .cta-call:hover {
+            background-color: #c4a878;
+            color: #1e3a4c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a4c 0%, #2c5aa0 100%);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .tagline {
+            color: #c4a878;
+            font-size: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            color: #e8e6e1;
+        }
+
+        .divider {
+            width: 60px;
+            height: 3px;
+            background-color: #c4a878;
+            margin: 1rem auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            padding: 4rem 1rem;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .service-card {
+            background-color: #f5f3f0;
+            padding: 2rem;
+            border-radius: 4px;
+            border-left: 4px solid #c4a878;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            color: #1e3a4c;
+            margin-bottom: 1rem;
+        }
+
+        /* Sectors Section */
+        .sectors {
+            background-color: #f5f3f0;
+        }
+
+        .sectors-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .sectors-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .sectors-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .sector-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .sector-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .sector-card h3 {
+            color: #1e3a4c;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.8rem;
+        }
+
+        .sector-card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* Why Us Section */
+        .why-us {
+            background-color: white;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .why-us-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .why-us-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .why-card {
+            padding: 2rem;
+            background-color: #f5f3f0;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .why-card h3 {
+            color: #1e3a4c;
+            margin-bottom: 1rem;
+        }
+
+        .why-card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* Product Range Section */
+        .products {
+            background-color: #f5f3f0;
+        }
+
+        .product-categories {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .product-categories {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .product-category {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 4px;
+        }
+
+        .product-category h3 {
+            color: #1e3a4c;
+            border-bottom: 2px solid #c4a878;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .product-category li {
+            padding: 0.5rem 0;
+            color: #555;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .product-category li:before {
+            content: "•";
+            color: #c4a878;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            background-color: white;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .steps {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+            background-color: #f5f3f0;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .step-number {
+            font-size: 2rem;
+            color: #c4a878;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .step h3 {
+            color: #1e3a4c;
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e3a4c 0%, #2c5aa0 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #e8e6e1;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #c4a878;
+            color: #1e3a4c;
+            padding: 1rem 3rem;
+            font-size: 1.2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e3a4c;
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-info {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .footer-section h4 {
+            color: #c4a878;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #d0d0d0;
+        }
+
+        .footer-section a {
+            color: #c4a878;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-divider {
+            border-top: 1px solid #c4a878;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .accent-text {
+            color: #c4a878;
+        }
+
+        /* Responsive Text */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+
+            .hero {
+                padding: 2.5rem 1rem;
+            }
+
+            .cta-section {
+                padding: 2.5rem 1rem;
+            }
+        }
+
+        /* Image optimization */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="Files from Michelle/Linen Exchange Logo  (1).png" alt="Linen Exchange Logo">
+            </div>
+            <button class="cta-call" onclick="window.location.href='tel:0452674784'">
+                📞 Call: 0452 674 784
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Smarter Linen.</h1>
+            <p class="tagline">Affordable by Design.</p>
+            <div class="divider"></div>
+            <p>Fully managed linen rental and laundry services delivering businesses that value quality, consistency and attention to detail.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p class="text-center">Professional linen solutions tailored for your business needs</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Linen Rental</h3>
+                    <p>Quality table linen, bed linen, towels, aprons and more - delivered clean, on time, every time. Our scheduled exchange service ensures your business always has fresh linen available.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Bulk Laundry</h3>
+                    <p>Professional laundering with care for the clean and fresh finish. Already own your linen? We provide collection, laundering, folding and delivery services for customer-owned stock.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectors Section -->
+    <section class="sectors">
+        <div class="container">
+            <h2>Serving a Wide Range of Sectors</h2>
+
+            <div class="sectors-grid">
+                <div class="sector-card">
+                    <img src="Files from Michelle/Hospitality.png" alt="Hospitality">
+                    <h3>Hospitality, Restaurants & Catering</h3>
+                    <p>Delivering convenience and reliability to hospitality operations.</p>
+                </div>
+                <div class="sector-card">
+                    <img src="Files from Michelle/Kitchen Linen.jpg" alt="Childcare">
+                    <h3>Childcare & Education</h3>
+                    <p>Safe, clean and durable linen solutions for learning environments and education centres.</p>
+                </div>
+                <div class="sector-card">
+                    <img src="Files from Michelle/Mat.jpg" alt="Health & Wellness">
+                    <h3>Health, Wellness & Personal Care</h3>
+                    <p>Supporting clinics, spas, wellness centres with hygienic linen solutions.</p>
+                </div>
+                <div class="sector-card">
+                    <img src="Files from Michelle/Robes Towels.jpg" alt="Hotels">
+                    <h3>Hotels, Motels & Short-stay Accommodation</h3>
+                    <p>Comfort, quality and consistency for every guest, every stay.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us">
+        <div class="container">
+            <h2>Why Businesses Choose Linen Exchange</h2>
+            <p class="text-center">The Smarter Alternative to Traditional Linen Providers</p>
+
+            <div class="why-us-grid">
+                <div class="why-card">
+                    <h3>Competitive Pricing</h3>
+                    <p>Our efficient operating model allows us to offer high-quality linen hire services at competitive rates, often helping businesses reduce linen costs without compromising quality.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Reliable Service</h3>
+                    <p>Scheduled collection and delivery ensure your business always has fresh linen available when you need it, every time.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Commercial Grade Linen</h3>
+                    <p>We supply durable, high-quality hospitality linen designed to perform in demanding commercial environments.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Flexible Programs</h3>
+                    <p>Whether you require tea towel hire, towel rental, table linen or a complete linen management program, we tailor our service to suit your business.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Local Brisbane Service</h3>
+                    <p>As a Brisbane-based business, we provide responsive support, personalised service and direct communication with our customers.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Customisation Available</h3>
+                    <p>Every business is unique. We offer customised solutions to meet your specific linen requirements and business goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <p class="text-center">A simple, hassle-free process</p>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>We Supply</h3>
+                    <p>Fresh, professionally laundered linen delivered to your business on schedule.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>You Use</h3>
+                    <p>Use the linen in your operations - no worries about laundry management.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>We Collect</h3>
+                    <p>Used linen is collected as part of our scheduled exchange service.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>We Return</h3>
+                    <p>Fresh, clean linen is returned, and the cycle continues seamlessly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Range Section -->
+    <section class="products">
+        <div class="container">
+            <h2>Our Product Range</h2>
+            <p class="text-center">Quality Commercial Linen for Every Business</p>
+
+            <div class="product-categories">
+                <div class="product-category">
+                    <h3>Hospitality & Food Service</h3>
+                    <ul>
+                        <li>Tea Towels</li>
+                        <li>Glass Polishing Cloths</li>
+                        <li>Kitchen Towels</li>
+                        <li>Microfibre Cloths</li>
+                        <li>Black Aprons</li>
+                        <li>Floor Mats</li>
+                        <li>Anti-Fatigue Mats</li>
+                        <li>Table Napkins</li>
+                        <li>Tablecloths</li>
+                        <li>Banquet Linen</li>
+                    </ul>
+                </div>
+                <div class="product-category">
+                    <h3>Accommodation & Guest Services</h3>
+                    <ul>
+                        <li>Flat Sheets</li>
+                        <li>Fitted Sheets</li>
+                        <li>Pillowcases</li>
+                        <li>Quilt Covers</li>
+                        <li>Bath Towels</li>
+                        <li>Hand Towels</li>
+                        <li>Face Washers</li>
+                        <li>Bath Mats</li>
+                        <li>Pool Towels</li>
+                    </ul>
+                </div>
+                <div class="product-category">
+                    <h3>Health, Wellness & Personal Care</h3>
+                    <ul>
+                        <li>Spa Towels</li>
+                        <li>Treatment Bed Linen</li>
+                        <li>Massage Towels</li>
+                        <li>Hand Towels</li>
+                        <li>Waffle Bathrobes</li>
+                        <li>Beauty & Treatment Linen</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Stop Managing Laundry. Start Running Your Business.</h2>
+            <p>Let Linen Exchange handle your linen management while you focus on what matters most.</p>
+            <button class="cta-button" onclick="window.location.href='tel:0452674784'">
+                Call Us Today: 0452 674 784
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📞 <a href="tel:0452674784">0452 674 784</a></p>
+                    <p>📍 Brisbane, Queensland</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <p>Linen Rental</p>
+                    <p>Commercial Laundry</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Industries</h4>
+                    <p>Hospitality</p>
+                    <p>Accommodation</p>
+                    <p>Health & Wellness</p>
+                </div>
+            </div>
+
+            <div class="footer-divider">
+                <p>&copy; 2026 Linen Exchange. All rights reserved. | Brisbane-based Commercial Linen Services</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

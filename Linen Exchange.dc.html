@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8f7f5;
+      --card: #ffffff;
+      --border: #e4e6ea;
+      --primary: #1e3a4c;
+      --accent: #c4a878;
+      --fg: #111827;
+      --muted-fg: #6b7280;
+      --subtle-fg: #4b5563;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      line-height: 1.6;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; }
+  </style>
+</helmet>
+
+<div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;">
+
+  <!-- ░░ HEADER ░░ -->
+  <header style="position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--border);">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
+      <img src="Files from Michelle/Linen Exchange Logo  (1).png" alt="Linen Exchange" style="height: 40px; width: auto; flex-shrink: 0;">
+      <nav style="display: flex; align-items: center; gap: 2px; flex: 1; justify-content: center;">
+        <button onClick="{{ scrollServices }}" style="background: none; border: none; cursor: pointer; font-family: inherit; font-size: 0.8125rem; font-weight: 500; color: var(--muted-fg); padding: 6px 11px; border-radius: 6px; transition: background 0.2s ease, color 0.2s ease; white-space: nowrap; letter-spacing: -0.01em;" style-hover="background: #f0ede8; color: var(--primary);">Services</button>
+        <button onClick="{{ scrollSectors }}" style="background: none; border: none; cursor: pointer; font-family: inherit; font-size: 0.8125rem; font-weight: 500; color: var(--muted-fg); padding: 6px 11px; border-radius: 6px; transition: background 0.2s ease, color 0.2s ease; white-space: nowrap; letter-spacing: -0.01em;" style-hover="background: #f0ede8; color: var(--primary);">Sectors</button>
+        <button onClick="{{ scrollWhyUs }}" style="background: none; border: none; cursor: pointer; font-family: inherit; font-size: 0.8125rem; font-weight: 500; color: var(--muted-fg); padding: 6px 11px; border-radius: 6px; transition: background 0.2s ease, color 0.2s ease; white-space: nowrap; letter-spacing: -0.01em;" style-hover="background: #f0ede8; color: var(--primary);">Why Us</button>
+        <button onClick="{{ scrollHowItWorks }}" style="background: none; border: none; cursor: pointer; font-family: inherit; font-size: 0.8125rem; font-weight: 500; color: var(--muted-fg); padding: 6px 11px; border-radius: 6px; transition: background 0.2s ease, color 0.2s ease; white-space: nowrap; letter-spacing: -0.01em;" style-hover="background: #f0ede8; color: var(--primary);">How It Works</button>
+        <button onClick="{{ scrollProducts }}" style="background: none; border: none; cursor: pointer; font-family: inherit; font-size: 0.8125rem; font-weight: 500; color: var(--muted-fg); padding: 6px 11px; border-radius: 6px; transition: background 0.2s ease, color 0.2s ease; white-space: nowrap; letter-spacing: -0.01em;" style-hover="background: #f0ede8; color: var(--primary);">Products</button>
+      </nav>
+      <a href="tel:0452674784" style="display: inline-flex; align-items: center; gap: 7px; background: var(--primary); color: white; padding: 0 18px; height: 38px; border-radius: 8px; font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: background-color 0.3s ease; white-space: nowrap; letter-spacing: -0.01em; flex-shrink: 0;"
+         style-hover="background-color: var(--accent); color: var(--primary);">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.63 4.35 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.13 6.13l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        Call: 0452 674 784
+      </a>
+    </div>
+  </header>
+
+  <!-- ░░ HERO ░░ -->
+  <section style="background: linear-gradient(135deg, #1e3a4c 0%, #2c5aa0 100%); padding: 6rem 1.5rem; text-align: center;">
+    <div style="max-width: 720px; margin: 0 auto;">
+      <div style="display: inline-flex; align-items: center; gap: 7px; background: rgba(196,168,120,0.18); border: 1px solid rgba(196,168,120,0.38); border-radius: 100px; padding: 5px 14px; margin-bottom: 1.75rem;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: #c4a878; display: inline-block; flex-shrink: 0;"></span>
+        <span style="font-size: 0.7rem; font-weight: 600; color: #c4a878; letter-spacing: 0.1em; text-transform: uppercase;">Brisbane-Based Commercial Linen</span>
+      </div>
+      <h1 style="font-size: clamp(2.75rem, 6vw, 4rem); font-weight: 700; color: white; letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 0.5rem;">Smarter Linen.</h1>
+      <p style="font-size: clamp(1.25rem, 2.5vw, 1.625rem); color: #c4a878; font-style: italic; font-family: Georgia, 'Times New Roman', serif; margin-bottom: 1.25rem; font-weight: 400;">Affordable by Design.</p>
+      <div style="width: 44px; height: 2px; background: #c4a878; margin: 0 auto 1.75rem;"></div>
+      <p style="font-size: 1.0625rem; color: rgba(255,255,255,0.78); line-height: 1.75; max-width: 540px; margin: 0 auto; text-wrap: pretty;">Fully managed linen rental and laundry services delivering businesses that value quality, consistency and attention to detail.</p>
+    </div>
+  </section>
+
+  <!-- ░░ SERVICES ░░ -->
+  <section id="services" style="background: white; padding: 5rem 1.5rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <p style="font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem;">What We Offer</p>
+        <h2 style="font-size: clamp(1.625rem, 3vw, 2.25rem); font-weight: 700; letter-spacing: -0.025em; color: var(--primary); margin-bottom: 0.75rem;">Our Services</h2>
+        <p style="font-size: 0.9375rem; color: var(--muted-fg); max-width: 420px; margin: 0 auto;">Professional linen solutions tailored for your business needs</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <div style="width: 44px; height: 44px; background: #f0ede8; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#c4a878" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          </div>
+          <h3 style="font-size: 1.0625rem; font-weight: 600; color: var(--primary); margin-bottom: 0.625rem; letter-spacing: -0.015em;">Linen Rental</h3>
+          <p style="font-size: 0.9rem; color: var(--muted-fg); line-height: 1.75;">Quality table linen, bed linen, towels, aprons and more — delivered clean, on time, every time. Our scheduled exchange service ensures your business always has fresh linen available.</p>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <div style="width: 44px; height: 44px; background: #f0ede8; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#c4a878" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          </div>
+          <h3 style="font-size: 1.0625rem; font-weight: 600; color: var(--primary); margin-bottom: 0.625rem; letter-spacing: -0.015em;">Bulk Laundry</h3>
+          <p style="font-size: 0.9rem; color: var(--muted-fg); line-height: 1.75;">Professional laundering with care for the clean and fresh finish. Already own your linen? We provide collection, laundering, folding and delivery services for customer-owned stock.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ SECTORS ░░ -->
+  <section id="sectors" style="background: var(--bg); padding: 5rem 1.5rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <p style="font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem;">Industries</p>
+        <h2 style="font-size: clamp(1.625rem, 3vw, 2.25rem); font-weight: 700; letter-spacing: -0.025em; color: var(--primary);">Serving a Wide Range of Sectors</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <div style="height: 186px; background: linear-gradient(135deg, #e8e3db 0%, #d6cfc5 100%); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <img src="Files from Michelle/Hospitality.png" alt="Hospitality" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;" onError="{{ hideImg }}">
+            <span style="font-size: 0.7rem; color: #a3998f; font-family: monospace; position: relative; z-index: 1; text-align: center; padding: 0 1rem; pointer-events: none;">hospitality photo</span>
+          </div>
+          <div style="padding: 1.25rem 1.375rem 1.5rem;">
+            <h3 style="font-size: 0.8125rem; font-weight: 600; color: var(--primary); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.5rem; line-height: 1.4;">Hospitality, Restaurants &amp; Catering</h3>
+            <p style="font-size: 0.875rem; color: var(--muted-fg); line-height: 1.65;">Delivering convenience and reliability to hospitality operations.</p>
+          </div>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <div style="height: 186px; background: linear-gradient(135deg, #e8e3db 0%, #d6cfc5 100%); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <img src="Files from Michelle/Kitchen Linen.jpg" alt="Childcare" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;" onError="{{ hideImg }}">
+            <span style="font-size: 0.7rem; color: #a3998f; font-family: monospace; position: relative; z-index: 1; text-align: center; padding: 0 1rem; pointer-events: none;">childcare photo</span>
+          </div>
+          <div style="padding: 1.25rem 1.375rem 1.5rem;">
+            <h3 style="font-size: 0.8125rem; font-weight: 600; color: var(--primary); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.5rem; line-height: 1.4;">Childcare &amp; Education</h3>
+            <p style="font-size: 0.875rem; color: var(--muted-fg); line-height: 1.65;">Safe, clean and durable linen solutions for learning environments and education centres.</p>
+          </div>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <div style="height: 186px; background: linear-gradient(135deg, #e8e3db 0%, #d6cfc5 100%); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <img src="Files from Michelle/Mat.jpg" alt="Health & Wellness" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;" onError="{{ hideImg }}">
+            <span style="font-size: 0.7rem; color: #a3998f; font-family: monospace; position: relative; z-index: 1; text-align: center; padding: 0 1rem; pointer-events: none;">wellness photo</span>
+          </div>
+          <div style="padding: 1.25rem 1.375rem 1.5rem;">
+            <h3 style="font-size: 0.8125rem; font-weight: 600; color: var(--primary); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.5rem; line-height: 1.4;">Health, Wellness &amp; Personal Care</h3>
+            <p style="font-size: 0.875rem; color: var(--muted-fg); line-height: 1.65;">Supporting clinics, spas, wellness centres with hygienic linen solutions.</p>
+          </div>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <div style="height: 186px; background: linear-gradient(135deg, #e8e3db 0%, #d6cfc5 100%); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <img src="Files from Michelle/Robes Towels.jpg" alt="Hotels" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;" onError="{{ hideImg }}">
+            <span style="font-size: 0.7rem; color: #a3998f; font-family: monospace; position: relative; z-index: 1; text-align: center; padding: 0 1rem; pointer-events: none;">hotel accommodation photo</span>
+          </div>
+          <div style="padding: 1.25rem 1.375rem 1.5rem;">
+            <h3 style="font-size: 0.8125rem; font-weight: 600; color: var(--primary); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.5rem; line-height: 1.4;">Hotels, Motels &amp; Short-stay Accommodation</h3>
+            <p style="font-size: 0.875rem; color: var(--muted-fg); line-height: 1.65;">Comfort, quality and consistency for every guest, every stay.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ WHY US ░░ -->
+  <section id="why-us" style="background: white; padding: 5rem 1.5rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <p style="font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem;">Our Advantage</p>
+        <h2 style="font-size: clamp(1.625rem, 3vw, 2.25rem); font-weight: 700; letter-spacing: -0.025em; color: var(--primary); margin-bottom: 0.75rem;">Why Businesses Choose Linen Exchange</h2>
+        <p style="font-size: 0.9375rem; color: var(--muted-fg); max-width: 400px; margin: 0 auto;">The Smarter Alternative to Traditional Linen Providers</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <div style="width: 40px; height: 40px; background: #f0ede8; border-radius: 9px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c4a878" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+          <h3 style="font-size: 0.9375rem; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem; letter-spacing: -0.01em;">Competitive Pricing</h3>
+          <p style="font-size: 0.875rem; color: var(--muted-fg); line-height: 1.7;">Our efficient operating model allows us to offer high-quality linen hire services at competitive rates, often helping businesses reduce linen costs without compromising quality.</p>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <div style="width: 40px; height: 40px; background: #f0ede8; border-radius: 9px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c4a878" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h3 style="font-size: 0.9375rem; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem; letter-spacing: -0.01em;">Reliable Service</h3>
+          <p style="font-size: 0.875rem; color: var(--muted-fg); line-height: 1.7;">Scheduled collection and delivery ensure your business always has fresh linen available when you need it, every time.</p>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <div style="width: 40px; height: 40px; background: #f0ede8; border-radius: 9px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c4a878" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          </div>
+          <h3 style="font-size: 0.9375rem; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem; letter-spacing: -0.01em;">Commercial Grade Linen</h3>
+          <p style="font-size: 0.875rem; color: var(--muted-fg); line-height: 1.7;">We supply durable, high-quality hospitality linen designed to perform in demanding commercial environments.</p>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <div style="width: 40px; height: 40px; background: #f0ede8; border-radius: 9px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c4a878" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
+          </div>
+          <h3 style="font-size: 0.9375rem; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem; letter-spacing: -0.01em;">Flexible Programs</h3>
+          <p style="font-size: 0.875rem; color: var(--muted-fg); line-height: 1.7;">Whether you require tea towel hire, towel rental, table linen or a complete linen management program, we tailor our service to suit your business.</p>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <div style="width: 40px; height: 40px; background: #f0ede8; border-radius: 9px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c4a878" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <h3 style="font-size: 0.9375rem; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem; letter-spacing: -0.01em;">Local Brisbane Service</h3>
+          <p style="font-size: 0.875rem; color: var(--muted-fg); line-height: 1.7;">As a Brisbane-based business, we provide responsive support, personalised service and direct communication with our customers.</p>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <div style="width: 40px; height: 40px; background: #f0ede8; border-radius: 9px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c4a878" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          </div>
+          <h3 style="font-size: 0.9375rem; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem; letter-spacing: -0.01em;">Customisation Available</h3>
+          <p style="font-size: 0.875rem; color: var(--muted-fg); line-height: 1.7;">Every business is unique. We offer customised solutions to meet your specific linen requirements and business goals.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ HOW IT WORKS ░░ -->
+  <section id="how-it-works" style="background: var(--bg); padding: 5rem 1.5rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <p style="font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem;">Simple Process</p>
+        <h2 style="font-size: clamp(1.625rem, 3vw, 2.25rem); font-weight: 700; letter-spacing: -0.025em; color: var(--primary); margin-bottom: 0.75rem;">How It Works</h2>
+        <p style="font-size: 0.9375rem; color: var(--muted-fg); max-width: 360px; margin: 0 auto;">A simple, hassle-free process</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <div style="width: 48px; height: 48px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; color: white; font-size: 1rem; font-weight: 700; letter-spacing: -0.02em;">1</div>
+          <h3 style="font-size: 0.9375rem; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem; letter-spacing: -0.01em;">We Supply</h3>
+          <p style="font-size: 0.875rem; color: var(--muted-fg); line-height: 1.65;">Fresh, professionally laundered linen delivered to your business on schedule.</p>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <div style="width: 48px; height: 48px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; color: white; font-size: 1rem; font-weight: 700; letter-spacing: -0.02em;">2</div>
+          <h3 style="font-size: 0.9375rem; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem; letter-spacing: -0.01em;">You Use</h3>
+          <p style="font-size: 0.875rem; color: var(--muted-fg); line-height: 1.65;">Use the linen in your operations — no worries about laundry management.</p>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <div style="width: 48px; height: 48px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; color: white; font-size: 1rem; font-weight: 700; letter-spacing: -0.02em;">3</div>
+          <h3 style="font-size: 0.9375rem; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem; letter-spacing: -0.01em;">We Collect</h3>
+          <p style="font-size: 0.875rem; color: var(--muted-fg); line-height: 1.65;">Used linen is collected as part of our scheduled exchange service.</p>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <div style="width: 48px; height: 48px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; color: var(--primary); font-size: 1rem; font-weight: 700; letter-spacing: -0.02em;">4</div>
+          <h3 style="font-size: 0.9375rem; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem; letter-spacing: -0.01em;">We Return</h3>
+          <p style="font-size: 0.875rem; color: var(--muted-fg); line-height: 1.65;">Fresh, clean linen is returned, and the cycle continues seamlessly.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ PRODUCTS ░░ -->
+  <section id="products" style="background: white; padding: 5rem 1.5rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <p style="font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem;">Product Range</p>
+        <h2 style="font-size: clamp(1.625rem, 3vw, 2.25rem); font-weight: 700; letter-spacing: -0.025em; color: var(--primary); margin-bottom: 0.75rem;">Our Product Range</h2>
+        <p style="font-size: 0.9375rem; color: var(--muted-fg); max-width: 420px; margin: 0 auto;">Quality Commercial Linen for Every Business</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <h3 style="font-size: 0.9375rem; font-weight: 600; color: var(--primary); padding-bottom: 0.875rem; border-bottom: 1px solid var(--accent); margin-bottom: 1.125rem; letter-spacing: -0.01em;">Hospitality &amp; Food Service</h3>
+          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Tea Towels</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Glass Polishing Cloths</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Kitchen Towels</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Microfibre Cloths</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Black Aprons</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Floor Mats</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Anti-Fatigue Mats</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Table Napkins</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Tablecloths</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Banquet Linen</li>
+          </ul>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <h3 style="font-size: 0.9375rem; font-weight: 600; color: var(--primary); padding-bottom: 0.875rem; border-bottom: 1px solid var(--accent); margin-bottom: 1.125rem; letter-spacing: -0.01em;">Accommodation &amp; Guest Services</h3>
+          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Flat Sheets</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Fitted Sheets</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Pillowcases</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Quilt Covers</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Bath Towels</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Hand Towels</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Face Washers</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Bath Mats</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Pool Towels</li>
+          </ul>
+        </div>
+
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             style-hover="transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <h3 style="font-size: 0.9375rem; font-weight: 600; color: var(--primary); padding-bottom: 0.875rem; border-bottom: 1px solid var(--accent); margin-bottom: 1.125rem; letter-spacing: -0.01em;">Health, Wellness &amp; Personal Care</h3>
+          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Spa Towels</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Treatment Bed Linen</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Massage Towels</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Hand Towels</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Waffle Bathrobes</li>
+            <li style="display: flex; align-items: center; gap: 9px; font-size: 0.875rem; color: var(--subtle-fg);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></span>Beauty &amp; Treatment Linen</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ CTA ░░ -->
+  <section style="background: linear-gradient(135deg, #1e3a4c 0%, #2c5aa0 100%); padding: 5rem 1.5rem; text-align: center;">
+    <div style="max-width: 640px; margin: 0 auto;">
+      <h2 style="font-size: clamp(1.75rem, 4vw, 2.625rem); font-weight: 700; color: white; letter-spacing: -0.03em; margin-bottom: 1rem; text-wrap: pretty; line-height: 1.15;">Stop Managing Laundry. Start Running Your Business.</h2>
+      <p style="font-size: 1.0625rem; color: rgba(255,255,255,0.76); line-height: 1.75; margin-bottom: 2.5rem;">Let Linen Exchange handle your linen management while you focus on what matters most.</p>
+      <a href="tel:0452674784"
+         style="display: inline-flex; align-items: center; gap: 9px; background: var(--accent); color: var(--primary); padding: 0 2.25rem; height: 54px; border-radius: 10px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease; letter-spacing: -0.01em;"
+         style-hover="transform: scale(1.05); box-shadow: 0 8px 24px rgba(0,0,0,0.25);">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.63 4.35 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.13 6.13l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        Call Us Today: 0452 674 784
+      </a>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer style="background: #1e3a4c; padding: 3.5rem 1.5rem 2.5rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; margin-bottom: 2.5rem;">
+        <div>
+          <h4 style="font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.875rem;">Contact</h4>
+          <p style="margin-bottom: 0.375rem;"><a href="tel:0452674784" style="font-size: 0.875rem; color: #c4a878; text-decoration: none;" style-hover="color: white;">0452 674 784</a></p>
+          <p style="font-size: 0.875rem; color: #b0b8c4;">Brisbane, Queensland</p>
+        </div>
+        <div>
+          <h4 style="font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.875rem;">Services</h4>
+          <p style="font-size: 0.875rem; color: #b0b8c4; margin-bottom: 0.375rem;">Linen Rental</p>
+          <p style="font-size: 0.875rem; color: #b0b8c4;">Commercial Laundry</p>
+        </div>
+        <div>
+          <h4 style="font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.875rem;">Industries</h4>
+          <p style="font-size: 0.875rem; color: #b0b8c4; margin-bottom: 0.375rem;">Hospitality</p>
+          <p style="font-size: 0.875rem; color: #b0b8c4; margin-bottom: 0.375rem;">Accommodation</p>
+          <p style="font-size: 0.875rem; color: #b0b8c4;">Health &amp; Wellness</p>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(196,168,120,0.22); padding-top: 1.5rem; text-align: center;">
+        <p style="font-size: 0.8125rem; color: #6b7a8d;">© 2026 Linen Exchange. All rights reserved. | Brisbane-based Commercial Linen Services</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const scrollTo = (id) => () => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.pageYOffset - 72;
+      window.scrollTo({ top, behavior: 'smooth' });
+    };
+    return {
+      scrollServices:    scrollTo('services'),
+      scrollSectors:     scrollTo('sectors'),
+      scrollWhyUs:       scrollTo('why-us'),
+      scrollHowItWorks:  scrollTo('how-it-works'),
+      scrollProducts:    scrollTo('products'),
+      hideImg: (e) => { e.target.style.display = 'none'; }
+    };
+  }
+}
+</script>
+</body>
+</html>
